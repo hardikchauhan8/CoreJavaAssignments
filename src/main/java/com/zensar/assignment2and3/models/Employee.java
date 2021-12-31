@@ -1,10 +1,11 @@
-package com.zensar.assignment2and3;
+package com.zensar.assignment2and3.models;
 
-import com.zensar.assignment2and3.customannotation.DefaultDate;
+import com.zensar.assignment2and3.customannotation.DefaultName;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Employee {
+public class Employee implements Serializable {
 
     private int id;
 
@@ -13,6 +14,10 @@ public class Employee {
     private double salary;
 
     private LocalDate joiningDate;
+
+    public Employee() {
+
+    }
 
     public Employee(int id, String name, double salary, LocalDate joiningDate) {
         this.id = id;
@@ -29,6 +34,7 @@ public class Employee {
         this.id = id;
     }
 
+    @DefaultName(name = "DefaultName")
     public String getName() {
         return name;
     }

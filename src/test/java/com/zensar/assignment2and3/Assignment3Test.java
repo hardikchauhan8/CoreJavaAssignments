@@ -1,5 +1,6 @@
 package com.zensar.assignment2and3;
 
+import com.zensar.assignment2and3.models.Employee;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;

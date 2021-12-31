@@ -2,3 +2,4 @@
 out/
 *.iml
 target/
+serialized_object.txt
