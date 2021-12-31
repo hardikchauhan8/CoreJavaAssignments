@@ -15,8 +15,12 @@ public class Assignment3 {
 
     public static void main(String[] args) {
         initEmps();
+
         longTenureEmployees(empList).forEach(System.out::println);
+        System.out.println("\n===================================================================\n");
+
         tenureWiseEmployeeCount(empList).forEach((noOfYears, count) -> System.out.println("no_of_years_completed => " + noOfYears + "\t no_of_employee_count => " + count));
+        System.out.println("\n===================================================================\n");
     }
 
     private static void initEmps() {
@@ -35,7 +39,7 @@ public class Assignment3 {
     }
 
     static Map<Integer, Long> tenureWiseEmployeeCount(List<Employee> employeeList) {
-        System.out.println("\n\n\nList of employees => No of years completed -> No of Employees");
+        System.out.println("\nList of employees => No of years completed -> No of Employees");
         return employeeList.stream().collect(Collectors.groupingBy((emp) -> LocalDate.now().getYear() - emp.getJoiningDate().getYear(), Collectors.counting()));
     }
 }

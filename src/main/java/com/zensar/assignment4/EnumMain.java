@@ -13,9 +13,13 @@ public class EnumMain {
 
     public static void main(String[] args) {
         fillOrders();
+        System.out.println("\n===================================================================\n");
         changeStatus(1, 3);
+        System.out.println("\n===================================================================\n");
         changeStatus(2, 4);
+        System.out.println("\n===================================================================\n");
         changeStatus(3, 2);
+        System.out.println("\n===================================================================\n");
     }
 
     private static void changeStatus(int id, int status) {
@@ -25,7 +29,7 @@ public class EnumMain {
             tempOrder.setStatus(Status.getStatus(status));
             orderList.set(id - 1, tempOrder);
         }
-        System.out.println("\n\n\nOrder List after update");
+        System.out.println("\nOrder List after update");
         orderList.forEach(System.out::println);
     }
 
